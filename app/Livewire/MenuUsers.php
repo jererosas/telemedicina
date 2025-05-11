@@ -44,6 +44,7 @@ class MenuUsers extends Component
     public function home () {
           $this->servicioon = false;
            $this->doctores = false;
+           //hola
     }
 
   #[On('d1')]
