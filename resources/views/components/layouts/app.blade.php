@@ -48,7 +48,7 @@
 
 
 
-    <div class="min-h-screen pb-16 ">
+    <div class="min-h-screen pb-18 ">
 
         <!-- HEADER -->
         @if (Auth::user()->admin == '1')

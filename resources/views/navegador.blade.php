@@ -1,4 +1,4 @@
-<nav class="bottom-nav bg-white border-t border-gray-200">
+<nav class="bottom-nav bg-white">
         <div class="max-w-md mx-auto px-2">
             <div class="flex justify-between">
                 <!-- Ítem Inicio -->
