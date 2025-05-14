@@ -15,7 +15,7 @@ class BuscadoMobile extends Component
           
             $this->dispatch('busc', id: 1);
 
-        } elseif ($this->search == NULL) {
+        } elseif ($this->search == NULL) { 
          $this->dispatch('busc', id: 2);
         }
 

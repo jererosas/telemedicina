@@ -54,7 +54,7 @@
 @if ($searcher == false)
 @livewire('servicios')
 @livewire('especialidades')
-@livewire('doctores-online')
+@livewire('doctores-online') 
 @elseif($searcher)
 
 @include('resultados-busqueda')

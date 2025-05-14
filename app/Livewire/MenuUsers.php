@@ -65,7 +65,7 @@ class MenuUsers extends Component
     #[On('busc')] 
     public function buscador ($id) {
         if ($id == '1') {
-          $this->searcher = true;
+          $this->searcher = true; 
 
         
 
