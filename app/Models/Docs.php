@@ -26,7 +26,8 @@ class Doc extends Model
         'img_perfil',
         'recetas',
         'certificados',
-        'precio_consulta'
+        'precio_consulta',
+        'matricula'
     ];
 
  

@@ -29,6 +29,13 @@
            .doctor-card {
             border-radius: 12px;
         }
+           .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
     </style>
 
 
@@ -44,7 +51,8 @@
 @livewire('top-mobile')
 @livewire('buscado-mobile')
 @livewire('servicios')
-
+@livewire('especialidades')
+@livewire('doctores-online')
 @endif
 @endif
 
@@ -57,4 +65,31 @@
 
 @include('navegador')
 
+   <script>
+        const verMasBtn = document.getElementById('verMasBtn');
+        const serviciosContainer = document.getElementById('serviciosContainer');
+        
+        verMasBtn.addEventListener('click', function() {
+            // Desplazar hacia la izquierda
+            serviciosContainer.scrollBy({
+                left: 200, // Cantidad de desplazamiento
+                behavior: 'smooth' // Efecto suave
+            });
+            
+            // Verificar si hemos llegado al final
+            setTimeout(() => {
+                const maxScroll = serviciosContainer.scrollWidth - serviciosContainer.clientWidth;
+                if (Math.abs(serviciosContainer.scrollLeft - maxScroll) < 10) {
+                    // Si estamos cerca del final, volver al inicio
+                    setTimeout(() => {
+                        serviciosContainer.scrollTo({
+                            left: 0,
+                            behavior: 'smooth'
+                        });
+                    }, 500);
+                }
+            }, 500);
+        });
+    </script>
+    
 </div>
