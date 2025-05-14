@@ -2,8 +2,8 @@
     <div class="container mx-auto px-4">
         <!-- Encabezado con título y botón -->
         <div class="flex  mb-2">
-            <h3 class="text-sm font-medium text-gray-500">Doctores Online </h3>
-           
+            <h3 class="text-sm font-medium text-gray-500">Doctores Online</h3>
+            
         </div>
 
 
