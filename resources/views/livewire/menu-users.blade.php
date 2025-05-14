@@ -50,9 +50,19 @@
 
 @livewire('top-mobile')
 @livewire('buscado-mobile')
+
+@if ($searcher == false)
 @livewire('servicios')
 @livewire('especialidades')
 @livewire('doctores-online')
+@elseif($searcher)
+
+@include('resultados-busqueda')
+    
+@endif
+
+
+
 @endif
 @endif
 

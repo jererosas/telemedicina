@@ -7,6 +7,8 @@ use Illuminate\Support\Facades\Auth;
 use Livewire\Attributes\On;
 use Livewire\Component;
 
+use function Laravel\Prompts\search;
+
 class MenuUsers extends Component
 {
 
@@ -14,6 +16,7 @@ class MenuUsers extends Component
     public $datos = false;
     public $servicioon = false;
     public $doctores = false;
+    public $searcher = false;
     public function render()
     {
 
@@ -42,9 +45,11 @@ class MenuUsers extends Component
     }
 
     public function home () {
-          $this->servicioon = false;
-           $this->doctores = false;
-           //hola
+
+            $this->searcher = false;
+            $this->servicioon = false;
+            $this->doctores = false;
+      
     }
 
   #[On('d1')]
@@ -54,5 +59,22 @@ class MenuUsers extends Component
            $this->servicioon = true;
            $this->doctores = true;
         }
+    }
+
+
+    #[On('busc')] 
+    public function buscador ($id) {
+        if ($id == '1') {
+          $this->searcher = true;
+
+        
+
+  }
+         else {
+          $this->searcher = false;
+       
+
+        }
+        
     }
 }
