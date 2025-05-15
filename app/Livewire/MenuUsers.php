@@ -49,8 +49,11 @@ class MenuUsers extends Component
             $this->searcher = false;
             $this->servicioon = false;
             $this->doctores = false;
+            $this->dispatch('react');
       
     }
+
+   
 
   #[On('d1')]
     public function views ($vista) {
@@ -72,7 +75,7 @@ class MenuUsers extends Component
   }
          else {
           $this->searcher = false;
-       
+            $this->dispatch('react');
 
         }
         

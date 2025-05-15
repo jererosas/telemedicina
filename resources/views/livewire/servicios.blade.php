@@ -3,7 +3,7 @@
         <!-- Encabezado con título y botón -->
         <div class="flex justify-between items-center mb-2">
             <h3 class="text-sm font-medium text-gray-500">Servicios disponibles</h3>
-            <button id="verMasBtn"  class="flex items-center text-xs text-white bg-blue-400 hover:text-blue-700 px-3 py-1 rounded-full border border-gray-200 shadow-xs">
+            <button id="verMasBtn" class="flex items-center text-xs text-white bg-blue-400 hover:text-blue-700 px-3 py-1 rounded-full border border-gray-200 shadow-xs">
                 <span>Ver más</span>
                 <i class="fas fa-chevron-right ml-1 mx-2 text-xs"></i>
             </button>

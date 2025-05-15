@@ -21,7 +21,7 @@
 
     <!-- ICONS CSS -->
     <link href="{{asset('build/assets/icon-fonts/icons.css')}}" rel="stylesheet">
-    <link href="{{asset('styles.css')}}" rel="stylesheet">
+
     <!-- APP SCSS -->
     @vite(['resources/sass/app.scss'])
 
@@ -91,8 +91,7 @@
     @yield('scripts')
     @livewireScripts
 
-    <!-- STICKY JS -->
-    <script src="{{asset('build/assets/sticky.js')}}"></script>
+
 
     <!-- APP JS -->
     @vite('resources/js/app.js')
@@ -100,7 +99,7 @@
 
     <!-- CUSTOM-SWITCHER JS -->
     @vite('resources/assets/js/custom-switcher.js')
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- END SCRIPTS -->
 </body>

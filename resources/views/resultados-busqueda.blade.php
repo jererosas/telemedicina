@@ -1,4 +1,4 @@
-  <div class="max-w-md mx-auto px-4 py-3">
+  <div class="max-w-md mx-auto bg-white px-4 py-3">
         <div class="mx-auto px-4 py-3 flex justify-between items-center">
             <h4 class="font-medium text-gray-700">Doctores</h4>
         </div>

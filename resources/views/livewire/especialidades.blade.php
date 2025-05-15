@@ -4,7 +4,7 @@
         <div class="flex justify-between items-center mb-2">
             <h3 class="text-sm font-medium text-gray-500">Especialidades Médicas</h3>
             <button id="verMasBtnx"
-              class="flex items-center text-xs text-white bg-blue-400 hover:text-blue-700 px-3 py-1 rounded-full border border-gray-200 shadow-xs">
+                class="flex items-center text-xs text-white bg-blue-400 hover:text-blue-700 px-3 py-1 rounded-full border border-gray-200 shadow-xs">
                 <span>Ver más</span>
                 <i class="fas fa-chevron-right ml-1 mx-2 text-xs"></i>
             </button>
@@ -87,6 +87,8 @@
             </div>
         </div>
     </div>
+
+    @script
     <script>
     const verMasBtnx = document.getElementById('verMasBtnx');
     const container = document.getElementById('especialidadesContainerx');
@@ -112,5 +114,36 @@
             }
         }, 500);
     });
+
+    $wire.on('react', () => {
+
+        $(document).ready(function() {
+            const verMasBtnx = document.getElementById('verMasBtnx');
+            const container = document.getElementById('especialidadesContainerx');
+            const scrollAmount = 300; // Cantidad de desplazamiento por clic
+
+            verMasBtnx.addEventListener('click', function() {
+                container.scrollBy({
+                    left: scrollAmount,
+                    behavior: 'smooth'
+                });
+
+                // Verificar si hemos llegado al final
+                setTimeout(() => {
+                    const maxScroll = container.scrollWidth - container.clientWidth;
+                    if (Math.abs(container.scrollLeft - maxScroll) < 10) {
+                        // Si estamos cerca del final, volver al inicio
+                        setTimeout(() => {
+                            container.scrollTo({
+                                left: 0,
+                                behavior: 'smooth'
+                            });
+                        }, 500);
+                    }
+                }, 500);
+            });
+        });
+    });
     </script>
+    @endscript
 </div>
